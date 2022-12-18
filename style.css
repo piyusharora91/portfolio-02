@@ -43,6 +43,10 @@ html::-webkit-scrollbar-thumb {
     border-radius: 7px;
 }
 
+html::-webkit-scrollbar-thumb:hover {
+    background: #af43de;
+}
+
 body {
     background: #111;
     overflow-x: hidden;
@@ -303,14 +307,25 @@ header .navbar ul li a:hover {
     cursor: pointer;
 }
 
-.portfolio .box-container .box img {
+.portfolio .box-container .box .tint {
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    opacity: 0.4;
+}
+
+.portfolio .box-container .box .tint img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.portfolio .box-container .box:hover img {
-    transform: scale(1.2);
+.portfolio .box-container .box:hover .tint {
+    opacity: 1;
+}
+
+.portfolio .box-container .box:hover .tint img {
+    transform: scale(1.1);
 }
 
 .contact .row {
@@ -380,23 +395,6 @@ header .navbar ul li a:hover {
     z-index: 100;
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* media queries  */
