@@ -311,7 +311,7 @@ header .navbar ul li a:hover {
     height: 100%;
     width: 100%;
     background-color: #111;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .portfolio .box-container .box .tint img {
@@ -429,6 +429,10 @@ header .navbar ul li a:hover {
         padding: 0;
     }
 
+    .portfolio .box-container .box .tint {
+        opacity: 1;
+    }
+
 }
 
 @media (max-width:768px) {
@@ -459,6 +463,7 @@ header .navbar ul li a:hover {
 
     .portfolio .box-container .box {
         width: 100%;
+        height: auto;
     }
 
     .contact .row form {
