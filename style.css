@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root {
-    --yellow: #f9ca24;
+    --purple: #ca4eff;
+    --blue: #4400ff;
 }
 
 * {
@@ -17,25 +18,29 @@
 }
 
 *::selection {
-    background: var(--yellow);
-    color: #333;
+    background: var(--purple);
+    color: var(--blue);
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
-    width: 1.4rem;
+    width: 1.3rem;
 }
 
 html::-webkit-scrollbar-track {
-    background: #222;
+    background: rgb(34, 34, 34);
+    box-shadow: inset 0 0 5px fff4;
+    border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--yellow);
+    background: var(--purple);
+    border-radius: 7px;
 }
 
 body {
@@ -65,7 +70,7 @@ section {
 }
 
 .btn:hover {
-    background: var(--yellow);
+    background: var(--purple);
 }
 
 .heading {
@@ -78,7 +83,7 @@ section {
 }
 
 .heading span {
-    color: var(--yellow);
+    color: var(--purple);
 }
 
 header {
@@ -102,7 +107,7 @@ header .user img {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .7rem solid var(--yellow);
+    border: .7rem solid var(--purple);
 }
 
 header .user .name {
@@ -136,7 +141,7 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-    background: var(--yellow);
+    background: var(--purple);
 }
 
 #menu {
@@ -170,7 +175,7 @@ header .navbar ul li a:hover {
 }
 
 .home h1 span {
-    color: var(--yellow);
+    color: var(--purple);
 }
 
 .home p {
@@ -195,7 +200,7 @@ header .navbar ul li a:hover {
 
 .about .row .info h3 {
     font-size: 2rem;
-    color: var(--yellow);
+    color: var(--purple);
     padding: 1rem 0;
     font-weight: normal;
 }
@@ -222,7 +227,7 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box span {
     font-size: 4rem;
-    color: var(--yellow);
+    color: var(--purple);
 }
 
 .about .row .counter .box h3 {
@@ -278,7 +283,7 @@ header .navbar ul li a:hover {
     text-align: center;
     font-size: 2rem;
     color: #fff;
-    background: var(--yellow);
+    background: var(--purple);
 }
 
 .portfolio .box-container {
@@ -365,7 +370,7 @@ header .navbar ul li a:hover {
 
 .contact .row .content .info h3 i {
     padding-right: 1rem;
-    color: var(--yellow);
+    color: var(--purple);
 }
 
 .top {
