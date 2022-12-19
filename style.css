@@ -2,7 +2,8 @@
 
 :root {
     --purple: #ca4eff;
-    --blue: #4400ff;
+    --white: #ffffff;
+    --black: #000000;
 }
 
 * {
@@ -18,8 +19,8 @@
 }
 
 *::selection {
-    background: var(--purple);
-    color: var(--blue);
+    background: var(--white);
+    color: var(--black);
 }
 
 html {
@@ -61,7 +62,7 @@ section {
 .btn {
     padding: .7rem 3rem;
     background: #333;
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
@@ -73,8 +74,16 @@ section {
     font-size: 1.8rem;
 }
 
+.btn .new-tab-icon {
+    font-size: 2rem;
+}
+
 .btn:hover {
     background: var(--purple);
+}
+
+.btn:hover .new-tab-icon {
+    translate: 2px -2px;
 }
 
 .heading {
@@ -83,7 +92,7 @@ section {
     font-size: 4rem;
     padding: 1rem;
     border-bottom: .1rem solid #fff4;
-    color: #fff;
+    color: var(--white);
 }
 
 .heading span {
@@ -116,7 +125,7 @@ header .user img {
 
 header .user .name {
     font-size: 3.5rem;
-    color: #fff;
+    color: var(--white);
 }
 
 header .user .post {
@@ -139,7 +148,7 @@ header .navbar ul li a {
     padding: 1rem;
     margin: 1.5rem 0;
     background: #333;
-    color: #fff;
+    color: var(--white);
     font-size: 2rem;
     border-radius: 5rem;
 }
@@ -153,7 +162,7 @@ header .navbar ul li a:hover {
     top: 2rem;
     right: 2rem;
     background: #333;
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
@@ -170,12 +179,12 @@ header .navbar ul li a:hover {
 
 .home h3 {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .home h1 {
     font-size: 5rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .home h1 span {
@@ -236,58 +245,7 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box h3 {
     font-size: 2rem;
-    color: #fff;
-}
-
-.education .box-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-    padding-left: 3rem;
-}
-
-.education .box-container .box {
-    width: 27rem;
-    margin: 4rem 1rem;
-    padding-left: 4rem;
-    border-left: .2rem solid #fff;
-    position: relative;
-}
-
-.education .box-container .box span {
-    font-size: 1.3rem;
-    background: #222;
-    color: #fff;
-    border-radius: 5rem;
-    padding: .5rem 2.5rem;
-}
-
-.education .box-container .box h3 {
-    font-size: 2rem;
-    color: #fff;
-    padding-top: 1.5rem;
-}
-
-.education .box-container .box p {
-    font-size: 1.4rem;
-    color: #eee;
-    padding: 1rem 0;
-}
-
-.education .box-container .box i {
-    position: absolute;
-    top: -1.5rem;
-    left: -2.5rem;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    line-height: 5rem;
-    text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    background: var(--purple);
+    color: var(--white);
 }
 
 .portfolio .box-container {
@@ -318,6 +276,7 @@ header .navbar ul li a:hover {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .portfolio .box-container .box:hover .tint {
@@ -326,6 +285,58 @@ header .navbar ul li a:hover {
 
 .portfolio .box-container .box:hover .tint img {
     transform: scale(1.1);
+    border-radius: 30px;
+}
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid var(--white);
+    position: relative;
+}
+
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #222;
+    color: var(--white);
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p {
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--purple);
 }
 
 .contact .row {
@@ -337,39 +348,30 @@ header .navbar ul li a:hover {
 
 .contact .row .content {
     flex: 1 1 30rem;
-    padding: 4rem;
+    padding: 2rem;
+    margin: 2rem;
     padding-bottom: 0;
 }
 
-.contact .row form {
+.contact .row .socials {
     flex: 1 1 45rem;
     padding: 2rem;
     margin: 2rem;
     margin-bottom: 4rem;
+    position: relative;
+    top: 17px;
 }
 
-.contact .row form .box {
-    padding: 1.5rem;
-    margin: 1rem 0;
-    background: #3333;
-    color: #fff;
-    text-transform: none;
-    font-size: 1.7rem;
-    width: 100%;
-}
-
-.contact .row form .box::placeholder {
-    text-transform: capitalize;
-}
-
-.contact .row form .message {
-    height: 15rem;
-    resize: none;
+.contact .row .socials .title {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 3rem;
+    padding-bottom: 2rem;
 }
 
 .contact .row .content .title {
     text-transform: uppercase;
-    color: #fff;
+    color: var(--white);
     font-size: 3rem;
     padding-bottom: 2rem;
 }
@@ -388,12 +390,49 @@ header .navbar ul li a:hover {
     color: var(--purple);
 }
 
+.contact .row .socials .box {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: var(--white);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact .row .socials .box .social-links {
+    color: var(--white);
+    font-size: 2.5rem;
+    transition: 0.2s linear all;
+}
+
+.contact .row .socials .box .social-links:hover {
+    translate: 0px -5px;
+    color: var(--purple);
+}
+
 .top {
     position: fixed;
-    bottom: 7.5rem;
-    right: 2rem;
+    bottom: 2.5rem;
+    right: 3rem;
     z-index: 100;
     display: none;
+    font-size: 5rem;
+    background: var(--purple);
+    color: var(--white);
+    height: 5.2rem;
+    width: 5rem;
+    border-radius: 50%;
+    padding-left: 0.30rem;
+    line-height: 5.9rem;
+}
+
+.top:hover {
+    /* color: #e8e8e8; */
+    background: #ba47eb;
 }
 
 
@@ -463,11 +502,11 @@ header .navbar ul li a:hover {
 
     .portfolio .box-container .box {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
-    .contact .row form {
-        margin: 3rem 0;
+    .contact .row .socials {
+        top: 0px;
     }
 
 }
