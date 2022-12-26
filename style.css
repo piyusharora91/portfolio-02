@@ -4,6 +4,9 @@
     --purple: #ca4eff;
     --white: #ffffff;
     --black: #000000;
+    --text-background-color: #191919;
+    --background-gradient-color1: rgb(53, 53, 53, 0.7);
+    --background-gradient-color2: rgba(57, 57, 57, 0.7);
 }
 
 * {
@@ -106,7 +109,7 @@ header {
     z-index: 1000;
     height: 100%;
     width: 35rem;
-    background: #1a1a1a;
+    background: rgba(30, 30, 30);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,6 +178,20 @@ header .navbar ul li a:hover {
     justify-content: center;
     flex-flow: column;
     padding: 0 15rem;
+
+    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
+        url('./assets/home-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+}
+
+.home .intro-section {
+    background: var(--text-background-color);
+    width: max-content;
+    border-radius: 10px;
+    padding: 5px 20px;
 }
 
 .home h3 {
@@ -192,9 +209,13 @@ header .navbar ul li a:hover {
 }
 
 .home p {
+    margin-top: 10px;
     font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
+    background: var(--text-background-color);
+    border-radius: 10px;
+    padding: 5px 20px;
 }
 
 .about .row {
@@ -256,6 +277,15 @@ header .navbar ul li a:hover {
     color: var(--white);
 }
 
+.portfolio {
+    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
+        url('./assets/portfolio-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+}
+
 .portfolio .box-container {
     display: flex;
     align-items: center;
@@ -276,8 +306,7 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box .tint {
     height: 100%;
     width: 100%;
-    background-color: #111;
-    opacity: 0.6;
+    background-color: rgba(17, 17, 17, 0.9);
 }
 
 .portfolio .box-container .box .tint img {
@@ -288,7 +317,7 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .box-container .box:hover .tint {
-    opacity: 1;
+    background-color: rgba(17, 17, 17, 0);
 }
 
 .portfolio .box-container .box:hover .tint img {
@@ -357,6 +386,15 @@ header .navbar ul li a:hover {
     font-size: 2rem;
     color: var(--white);
     background: var(--purple);
+}
+
+.contact {
+    background-image: linear-gradient(to bottom, rgb(53, 53, 53, 0.15), rgb(53, 53, 53, 0.15)),
+        url('./assets/contact-background.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
 }
 
 .contact .row {
@@ -437,7 +475,7 @@ header .navbar ul li a:hover {
     justify-content: space-around;
     padding: 1.5rem;
     margin: 1rem 0;
-    background: #3333;
+    background: rgba(25, 25, 25, 0.8);
     color: var(--white);
     text-transform: none;
     font-size: 1.7rem;
