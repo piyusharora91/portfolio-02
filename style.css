@@ -391,10 +391,10 @@ header .navbar ul li a:hover {
 .contact {
     background-image: linear-gradient(to bottom, rgb(53, 53, 53, 0.15), rgb(53, 53, 53, 0.15)),
         url('./assets/contact-background.jpeg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: right;
+    background-position: center;
 }
 
 .contact .row {
