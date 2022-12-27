@@ -5,8 +5,8 @@
     --white: #ffffff;
     --black: #000000;
     --text-background-color: #191919;
-    --background-gradient-color1: rgb(53, 53, 53, 0.7);
-    --background-gradient-color2: rgba(57, 57, 57, 0.7);
+    --background-gradient-color1: rgba(0, 0, 0, 0.5);
+    --background-gradient-color2: rgba(57, 57, 57, 0.5);
 }
 
 * {
@@ -109,7 +109,7 @@ header {
     z-index: 1000;
     height: 100%;
     width: 35rem;
-    background: rgba(30, 30, 30);
+    background: rgb(14, 13, 13, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,7 +282,8 @@ header .navbar ul li a:hover {
 }
 
 .portfolio {
-    background-image: url('./assets/portfolio-background.png');
+    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
+        url('./assets/portfolio-background.jpeg');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -399,6 +400,14 @@ header .navbar ul li a:hover {
     background-position: right;
 }
 
+.contact .heading {
+    background: var(--text-background-color);
+    width: max-content;
+    margin: auto;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
 .contact .row {
     display: flex;
     align-items: center;
@@ -413,27 +422,17 @@ header .navbar ul li a:hover {
     padding-bottom: 0;
 }
 
-.contact .row .socials {
-    flex: 1 1 45rem;
-    padding: 2rem;
-    margin: 2rem;
-    margin-bottom: 4rem;
-    position: relative;
-    top: 17px;
-}
-
-.contact .row .socials .title {
-    text-transform: uppercase;
-    color: var(--white);
-    font-size: 3rem;
-    padding-bottom: 2rem;
-}
-
 .contact .row .content .title {
     text-transform: uppercase;
     color: var(--white);
     font-size: 3rem;
     padding-bottom: 2rem;
+}
+
+.contact .row .content .info {
+    background: var(--text-background-color);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .contact .row .content .info .mail {
@@ -472,17 +471,36 @@ header .navbar ul li a:hover {
     color: var(--purple);
 }
 
+.contact .row .socials {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    top: 4.5px;
+}
+
+.contact .row .socials .title {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
 .contact .row .socials .box {
     display: flex;
     justify-content: space-around;
     padding: 1.5rem;
     margin: 1rem 0;
-    background: rgba(25, 25, 25, 0.8);
+    /* background: rgba(25, 25, 25, 0.8); */
+    background: var(--text-background-color);
     color: var(--white);
     text-transform: none;
     font-size: 1.7rem;
     width: 100%;
     border-radius: 10px;
+    position: relative;
+    bottom: 14px;
 }
 
 .contact .row .socials .box .social-links {
