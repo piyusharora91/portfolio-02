@@ -406,6 +406,8 @@ header .navbar ul li a:hover {
     margin: auto;
     padding: 5px 20px;
     border-radius: 10px;
+    position: relative;
+    top: 15px;
 }
 
 .contact .row {
