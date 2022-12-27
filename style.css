@@ -28,7 +28,7 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
 }
 
@@ -184,9 +184,8 @@ header .navbar ul li a:hover {
     flex-flow: column;
     padding: 0 15rem;
 
-    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
-        url('./assets/home-background.png');
-    background-size: cover;
+    background-image: url('./assets/home-background.png');
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center top;
@@ -283,9 +282,8 @@ header .navbar ul li a:hover {
 }
 
 .portfolio {
-    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
-        url('./assets/portfolio-background.png');
-    background-size: cover;
+    background-image: url('./assets/portfolio-background.png');
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center top;
@@ -394,9 +392,8 @@ header .navbar ul li a:hover {
 }
 
 .contact {
-    background-image: linear-gradient(to bottom, rgb(53, 53, 53, 0.15), rgb(53, 53, 53, 0.15)),
-        url('./assets/contact-background.jpeg');
-    background-size: cover;
+    background-image: url('./assets/contact-background.jpeg');
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
