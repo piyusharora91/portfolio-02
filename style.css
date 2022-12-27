@@ -584,7 +584,7 @@ header .navbar ul li a:hover {
     }
 
     .home {
-        background-size: 50vw 50vh;
+        background-size: cover;
     }
 
     .contact .heading {
