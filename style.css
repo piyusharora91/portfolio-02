@@ -236,6 +236,13 @@ header .navbar ul li a:hover {
     padding-left: 6rem;
 }
 
+.about .row .info .info-section-links {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .about .row .info h3 {
     font-size: 2rem;
     color: var(--purple);
@@ -246,10 +253,6 @@ header .navbar ul li a:hover {
 .about .row .info h3 span {
     color: #eee;
     padding: 0 .5rem;
-}
-
-.about .row .info #codepen-link {
-    margin-left: 0.7rem;
 }
 
 .about .row .counter {
@@ -494,7 +497,6 @@ header .navbar ul li a:hover {
     justify-content: space-around;
     padding: 1.5rem;
     margin: 1rem 0;
-    /* background: rgba(25, 25, 25, 0.8); */
     background: var(--text-background-color);
     color: var(--white);
     text-transform: none;
@@ -605,6 +607,10 @@ header .navbar ul li a:hover {
 
     .about .row .counter .box {
         width: 100%;
+    }
+
+    .about .row .info .info-section-links {
+        width: 85%;
     }
 
     .education .box-container .box {
