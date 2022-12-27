@@ -554,6 +554,7 @@ header .navbar ul li a:hover {
 
     header {
         left: -120%;
+        background: rgb(14, 13, 13);
     }
 
     #menu {
