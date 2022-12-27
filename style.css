@@ -53,7 +53,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     background: #111;
-    overflow: hidden;
+    overflow-x: hidden;
     padding-left: 35rem;
 }
 
