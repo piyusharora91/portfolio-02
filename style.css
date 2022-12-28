@@ -313,7 +313,8 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box .tint {
     height: 100%;
     width: 100%;
-    background-color: rgba(17, 17, 17, 0.9);
+    background-color: rgba(17, 17, 17);
+    opacity: 0.8;
 }
 
 .portfolio .box-container .box .tint img {
@@ -324,7 +325,8 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .box-container .box:hover .tint {
-    background-color: rgba(17, 17, 17, 0);
+    background-color: rgba(17, 17, 17);
+    opacity: 1;
 }
 
 .portfolio .box-container .box:hover .tint img {
