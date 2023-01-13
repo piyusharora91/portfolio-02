@@ -313,7 +313,8 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box .tint {
     height: 100%;
     width: 100%;
-    color: #000000;
+    background-color: #000000;
+    opacity: 0.8;
 }
 
 .portfolio .box-container .box .tint img {
