@@ -187,8 +187,7 @@ header .navbar ul li a:hover {
     background-image: url('./assets/home-background.png');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center top;
+    background-position: center center;
 }
 
 .home .intro-section {
@@ -289,8 +288,9 @@ header .navbar ul li a:hover {
         url('./assets/portfolio-background.jpeg');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center top;
+    min-height: 100vh;
+    height: max-content;
 }
 
 .portfolio .box-container {
@@ -313,8 +313,7 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box .tint {
     height: 100%;
     width: 100%;
-    background-color: rgba(17, 17, 17);
-    opacity: 0.8;
+    color: #000000;
 }
 
 .portfolio .box-container .box .tint img {
@@ -401,7 +400,6 @@ header .navbar ul li a:hover {
     background-image: url('./assets/contact-background.jpeg');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: right;
 }
 
