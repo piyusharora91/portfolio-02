@@ -28,8 +28,8 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    min-height: 100%;
 }
 
 html::-webkit-scrollbar {
@@ -53,8 +53,8 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     background: #111;
-    overflow-x: hidden;
     padding-left: 35rem;
+    overflow-x: hidden;
 }
 
 section {
@@ -173,21 +173,14 @@ header .navbar ul li a:hover {
     display: none;
 }
 
-.main-body-content {
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
 .home {
     display: flex;
     justify-content: center;
     flex-flow: column;
     padding: 0 15rem;
-
-    background-image: url('./assets/home-background.png');
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
 .home .intro-section {
@@ -219,6 +212,10 @@ header .navbar ul li a:hover {
     background: var(--text-background-color);
     border-radius: 10px;
     padding: 5px 20px;
+}
+
+.about {
+    background: rgb(18, 18, 18);
 }
 
 .about .row {
@@ -284,13 +281,10 @@ header .navbar ul li a:hover {
 }
 
 .portfolio {
-    background-image: linear-gradient(to bottom, var(--background-gradient-color1), var(--background-gradient-color2)),
-        url('./assets/portfolio-background.jpeg');
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    background-position: center top;
+    position: relative;
     min-height: 100vh;
     height: max-content;
+    width: 100%;
 }
 
 .portfolio .box-container {
@@ -306,7 +300,6 @@ header .navbar ul li a:hover {
     width: 26rem;
     border-radius: 1rem;
     margin: 2rem;
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -315,6 +308,8 @@ header .navbar ul li a:hover {
     width: 100%;
     background-color: #000000;
     opacity: 0.8;
+    border-radius: 1.4rem;
+    transition: 0.5s all ease-in;
 }
 
 .portfolio .box-container .box .tint img {
@@ -322,6 +317,7 @@ header .navbar ul li a:hover {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: 0.3s all linear;
 }
 
 .portfolio .box-container .box:hover .tint {
@@ -330,8 +326,11 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .box-container .box:hover .tint img {
-    transform: scale(1.1);
-    border-radius: 30px;
+    transform: scale(1.05);
+}
+
+.education {
+    background: rgb(14, 13, 13);
 }
 
 .education .box-container {
@@ -398,10 +397,9 @@ header .navbar ul li a:hover {
 }
 
 .contact {
-    background-image: url('./assets/contact-background.jpeg');
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    background-position: right;
+    position: relative;
+    height: 100vh;
+    width: 100%;
 }
 
 .contact .heading {
@@ -540,11 +538,24 @@ header .navbar ul li a:hover {
     line-height: 5.5rem;
 }
 
+.parallax {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: 100vh 100vw;
+    z-index: -1;
+}
+
+.portfolio .parallax {
+    filter: brightness(60%);
+}
+
 
 /* media queries  */
 
 @media (max-width:1200px) {
-
     html {
         font-size: 55%;
     }
@@ -561,11 +572,9 @@ header .navbar ul li a:hover {
     .portfolio .box-container .box .tint {
         opacity: 1;
     }
-
 }
 
 @media (max-width:991px) {
-
     header {
         left: -120%;
         background: rgb(14, 13, 13);
@@ -582,7 +591,6 @@ header .navbar ul li a:hover {
     body {
         padding: 0;
     }
-
 }
 
 @media (max-width:768px) {
@@ -598,10 +606,9 @@ header .navbar ul li a:hover {
     .contact .heading {
         top: 10px;
     }
-
 }
 
-@media (max-width:400px) {
+@media (max-width:550px) {
 
     header {
         width: 100vw;
@@ -609,6 +616,32 @@ header .navbar ul li a:hover {
 
     .heading {
         margin: 0 3rem;
+    }
+
+    .home .intro-section {
+        width: 100%;
+    }
+
+    .home .intro-section h3 {
+        font-size: 3rem;
+    }
+
+    .home .intro-section h1 {
+        font-size: 4.5rem;
+    }
+
+    .education .box-container {
+        width: 100%;
+    }
+
+    .education .box-container .box {
+        width: 85%;
+        margin: 30px auto;
+        text-align: justify;
+    }
+
+    .parallax {
+        object-fit: cover;
     }
 
     .about .row .counter .box {
@@ -619,12 +652,9 @@ header .navbar ul li a:hover {
         width: 85%;
     }
 
-    .education .box-container .box {
-        width: 100%;
-    }
-
     .contact .row .socials {
         top: 0px;
+        padding: 0;
+        width: 100%;
     }
-
 }
