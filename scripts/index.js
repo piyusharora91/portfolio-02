@@ -3,29 +3,13 @@ const mailValue = document.getElementById("mail-value");
 const header = document.querySelector("header");
 
 document.addEventListener("DOMContentLoaded", () => {
-  //   $("#menu").on("click", function () {
-  //     $(this).toggleClass("fa-times");
-  //     $("header").toggleClass("toggle");
-  //   });
-
+  //toggle header in mobile/tablet browsers
   hambergerIcon.addEventListener("click", () => {
     hambergerIcon.classList.toggle("fa-times");
     header.classList.toggle("toggle");
   });
 
-  //   $("#mail").on("click", function () {
-  //     const mail_text = $("#mail span").text();
-  //     if (mail_text) {
-  //       navigator.clipboard
-  //         .writeText(mail_text)
-  //         .then(() => {
-  //           alert("Mail Copied");
-  //         })
-  //         .catch(() => {
-  //           alert("Failed To Copy Mail To Clipboard");
-  //         });
-  //     }
-  //   });
+  //copy mail functioanlity
   mailValue.addEventListener("click", () => {
     if (mailValue.textContent) {
       navigator.clipboard
