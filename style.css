@@ -566,10 +566,6 @@ header .navbar ul li a:hover {
     height: 30rem;
     width: 40rem;
   }
-
-  .portfolio .box-container .box .tint {
-    opacity: 1;
-  }
 }
 
 @media (max-width: 991px) {
@@ -589,6 +585,10 @@ header .navbar ul li a:hover {
 
   body {
     padding: 0;
+  }
+
+  .portfolio .box-container .box .tint {
+    opacity: 1;
   }
 }
 
